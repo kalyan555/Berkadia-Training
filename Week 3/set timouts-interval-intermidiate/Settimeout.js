@@ -1,8 +1,8 @@
-function sayHi() {
+function print() {
     console.log('Hello');
   }
   
- setTimeout(sayHi, 5000);
+ setTimeout(print, 5000);
  
 /*
 Output:

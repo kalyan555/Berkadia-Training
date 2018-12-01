@@ -1,0 +1,17 @@
+
+<!-- <ul>
+  <li *ngFor="let i of laptops" ><button (click)="counter()">{{ i }}</button></li>
+</ul> -->
+
+
+<table id="laptops">
+    <tr>
+      <th>Products</th>
+      <th>Add To Cart</th>
+    </tr>
+    <tr *ngFor="let i of laptops">
+        <td>{{i}}</td>
+        <td><button class="button button1" (click)="counter()">Buy This</button></td>
+    </tr> 
+  </table>
+  

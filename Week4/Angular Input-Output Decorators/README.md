@@ -1,1 +1,1 @@
-![Output Image](https://github.com/kalyan555/Berkedia-Week-2/blob/master/Typescript%20Task/output.PNG)
+![Output Image](https://github.com/kalyan555/Berkadia-Training/blob/master/Week4/Angular%20Input-Output%20Decorators/output.png)

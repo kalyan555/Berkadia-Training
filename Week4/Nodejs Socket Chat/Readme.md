@@ -7,3 +7,7 @@
 * Nodejs
 * Express 
 * Socket.io
+
+## Builth with
+* Broadcasting of messages
+* Real time Notification if another user is typing

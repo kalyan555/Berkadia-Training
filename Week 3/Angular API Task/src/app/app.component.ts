@@ -49,7 +49,8 @@ export class AppComponent {
     },
     (error) =>{
       console.log(error) 
-      document.getElementById('heading').innerHTML="Pokemon not found"; 
+      document.getElementById('heading').innerHTML="Pokemon not found / Server unable to handle"; 
+      document.getElementById('pokedex').style.display="none";
     }
   );
 

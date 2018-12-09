@@ -1,0 +1,38 @@
+<br /> <br />
+<div class="container">
+  <h1>Dependancy Injection with NgClass and ngFor with attributes</h1>
+  <button (click)="showData()">Click to display data</button>
+  <br /> 
+  <p class="info">The rows are build with *ngFor and its inbuilt variables with ngClass.The table consists of
+      <br/><strong>1.</strong>First row will be purple by 'first' variable of ngFor
+      <br/><strong>2.</strong>Odd rows will be orange by 'odd' variable of ngFor
+      <br/><strong>3.</strong>Even rows will be yellow by 'even' variable of ngFor
+      <br/><strong>4.</strong>Last row will be pink by 'last' variable of ngFor
+    </p><br /> <br />
+  <table>
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Marks
+      </th>
+    </tr>
+    <tr *ngFor="let d of dataset;let i = index; let even = even; let odd = odd;let first = first; let last = last"
+        [ngClass]="{ firstclass: first, lastclass: last,oddclass: odd, evenclass: even }">
+      <td>
+        {{i+1}}
+      </td>
+      <td>
+        {{d.name}}
+      </td>
+      <td>
+        {{d.department}}
+      </td>
+    </tr>
+  </table>
+  
+</div>

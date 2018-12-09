@@ -1,0 +1,73 @@
+.container{
+    margin:auto;
+    width:50%;
+}
+h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color : #228B22;
+}
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: #008CBA; 
+    border: 2px solid #008CBA;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+  table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 22px;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #008CBA;
+    color: white;
+    font-size: 25px;
+  }
+
+  .oddclass{
+      background-color: #FC6600;
+  }
+
+  .evenclass{
+    background-color:  #FFDF00;
+}
+.firstclass{
+    background-color:  #9400D3;
+}
+.lastclass{
+    background-color:  #FF1493;
+}
+.info{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}

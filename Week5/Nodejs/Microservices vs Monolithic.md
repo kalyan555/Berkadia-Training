@@ -26,6 +26,7 @@ Services more likely need to communicate over the network, whereas services with
 Changes to the contract are more likely to impact consumers deployed elsewhere, whereas in the monolithic model consumers are more likely to be within the monolith and will be rolled out in lockstep with the service. Also, mechanisms to improve autonomy, such as eventual consistency and asynchronous calls, add complexity to microservices.
 #### Testability: 
 Integration tests are harder to setup and run because they may span different microservices on different runtime environments.
-#### Management: the effort to manage operations increases because there are more runtime components, log files, and point-to-point interactions to oversee.
+#### Management: 
+The effort to manage operations increases because there are more runtime components, log files, and point-to-point interactions to oversee.
 #### Memory use: 
 Several classes and libraries are often replicated in each microservice bundle and the overall memory footprint increases.

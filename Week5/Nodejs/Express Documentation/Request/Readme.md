@@ -1,42 +1,43 @@
 # Request
 The main properties and methods are:
-* app
+
+#### app
 This property holds a reference to the instance of the Express application that is using the middleware.
-* baseUrl
+#### baseUrl
 The URL path on which a router instance was mounted.
-* body
+#### body
 Contains key-value pairs of data submitted in the request body
-* cookies
+#### cookies
 When using cookie-parser middleware, this property is an object that contains cookies sent by the request. If the request contains no cookies, it defaults to {}.
-* fresh
+#### fresh
 Indicates whether the request is “fresh"
-* hostname
+#### hostname
 Contains the hostname derived from the Host HTTP header.
-* ip
+#### ip
 Contains the remote IP address of the request.
-* ips
+#### ips
 When the trust proxy setting does not evaluate to false, this property contains an array of IP addresses specified in the X-Forwarded-For request header. Otherwise, it contains an empty array
-* method
+#### method
 Contains a string corresponding to the HTTP method of the request: GET, POST, PUT, and so on.
-* originalUrl
+#### originalUrl
 This property is much like req.url; however, it retains the original request URL, allowing you to rewrite req.url freely for internal routing purposes
-* params
+#### params
 This property is an object containing properties mapped to the named route “parameters”
-* path
+#### path
 Contains the path part of the request URL.
-* protocol
+#### protocol
 Contains the request protocol string: either http or (for TLS requests) https.
-* query
+#### query
 This property is an object containing a property for each query string parameter in the route. If there is no query string, it is the empty object, {}.
-* route
+#### route
 Contains the currently-matched route, a string
-* secure
+#### secure
 A Boolean property that is true if a TLS connection is established.
-* signedCookies
+#### signedCookies
 When using cookie-parser middleware, this property contains signed cookies sent by the request, unsigned and ready for use
-* stale
+#### stale
 When using cookie-parser middleware, this property contains signed cookies sent by the request, unsigned and ready for use
-* subdomains
+#### subdomains
 An array of subdomains in the domain name of the request.
-* xhr
+#### xhr
 A Boolean property that is true if the request’s X-Requested-With header field is “XMLHttpRequest”, indicating that the request was issued by a client library such as jQuery

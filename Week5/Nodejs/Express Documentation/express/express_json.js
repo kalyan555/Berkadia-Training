@@ -1,9 +1,5 @@
 let express = require("express");
 let app = express();
-//Create a middle ware aplication which can be used with next() method 
-
-
-// next method call the continuation of the program after that function in the below app.get()
 app.get('/', (req, res, next) => {
     res.end("Hello World");
     console.log("expression.json() function: \n"+express.json());

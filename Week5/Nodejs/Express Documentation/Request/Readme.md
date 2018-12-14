@@ -1,6 +1,8 @@
 # Request
 The main properties and methods are:
 
+## Properties
+The properties are mentioned below:
 #### app
 This property holds a reference to the instance of the Express application that is using the middleware.
 #### baseUrl
@@ -41,3 +43,5 @@ When using cookie-parser middleware, this property contains signed cookies sent 
 An array of subdomains in the domain name of the request.
 #### xhr
 A Boolean property that is true if the request’s X-Requested-With header field is “XMLHttpRequest”, indicating that the request was issued by a client library such as jQuery
+
+

@@ -3,4 +3,4 @@
 example for routing and consists of the following screens
 
 ### Homepage
-![Output Image](https://github.com/kalyan555/Berkadia-Training/blob/master/Week6/Angular/Output/o1.PNG)
+![Output Image](https://github.com/kalyan555/Berkadia-Training/blob/master/Week6/Angular/output/o1.PNG)

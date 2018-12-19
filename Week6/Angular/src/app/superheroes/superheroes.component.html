@@ -1,0 +1,17 @@
+<div class="main pt-4">
+    <div class="container" style="text-align:center">
+        <br><br>
+       <label class="text-primary p-3" style="font-size:35px"><strong>Superheroes</strong></label> <br>
+       <a *ngFor="let i of data" [routerLink]="['/Superheroes',i.id]">
+       <div class="card bg-primary">
+        <div class="card-body">
+          <h4 class="card-title text-white">{{i.name}}</h4>
+          <hr class="bg-white"/>
+          <h6 class="card-text m-2 text-white">Real Name:&emsp;{{i.realname}}</h6>
+          <h6 class="card-text m-2 text-white">Powers:&emsp;{{i.powers}}</h6>
+        </div>
+      </div>
+      <br/>
+    </a>
+</div>
+</div>

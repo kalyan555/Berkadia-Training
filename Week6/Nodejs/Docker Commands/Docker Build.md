@@ -343,3 +343,102 @@ Some of the commands with docker build and attributes are
         $ docker build . -q
 
         sha256:608ad1c28d3371e6ab6ebb41f889766b9b5fee2f02b3ae4c7a3d56c513337690
+
+#### 13 --cache-from		Images to consider as cache sources
+        $ docker build -t ex . --cache-from sample
+
+        Sending build context to Docker daemon  17.92kB
+        Step 1/8 : FROM node:10-alpine
+        ---> 01379e6790c7
+        Step 2/8 : RUN mkdir -p /src/app
+        ---> Using cache
+        ---> 78bc14c69d64
+        Step 3/8 : WORKDIR /src/app
+        ---> Using cache
+        ---> 4df50d43c61f
+        Step 4/8 : COPY package.json /src/app/package.json
+        ---> Using cache
+        ---> 2aaa1aabaedb
+        Step 5/8 : RUN npm install
+        ---> Using cache
+        ---> 37f0803a568b
+        Step 6/8 : COPY . /src/app
+        ---> Using cache
+        ---> 5a714f24a517
+        Step 7/8 : EXPOSE 3000
+        ---> Using cache
+        ---> 3d6fff6d4853
+        Step 8/8 : CMD [ "npm", "start" ]
+        ---> Using cache
+        ---> 104620773cb3
+        Successfully built 104620773cb3
+        Successfully tagged ex:latest
+
+#### 14 --no-cache		Do not use cache when building the image
+        $ docker build -t ex1 . --no-cache
+
+        Sending build context to Docker daemon  17.92kB
+        Step 1/8 : FROM node:10-alpine
+        ---> 01379e6790c7
+        Step 2/8 : RUN mkdir -p /src/app
+        ---> Running in 2e5ce0c1fb35
+        Removing intermediate container 2e5ce0c1fb35
+        ---> 898045d7075b
+        Step 3/8 : WORKDIR /src/app
+        Removing intermediate container b67af2966172
+        ---> 28328904116b
+        Step 4/8 : COPY package.json /src/app/package.json
+        ---> 2ba7fb0abc3e
+        Step 5/8 : RUN npm install
+        ---> Running in 93cf216d917c
+        npm WARN deprecated jade@1.6.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+        npm WARN deprecated constantinople@2.0.1: Please update to at least constantinople 3.1.1
+        npm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
+        npm notice created a lockfile as package-lock.json. You should commit this file.
+        added 78 packages from 74 contributors and audited 143 packages in 3.265s
+        found 28 vulnerabilities (11 low, 12 moderate, 5 high)
+        run `npm audit fix` to fix them, or `npm audit` for details
+        Removing intermediate container 93cf216d917c
+        ---> 813608aa11d8
+        Step 6/8 : COPY . /src/app
+        ---> 4a894c853748
+        Step 7/8 : EXPOSE 3000
+        ---> Running in 253f3e738635
+        Removing intermediate container 253f3e738635
+        ---> bd58ad036071
+        Step 8/8 : CMD [ "npm", "start" ]
+        ---> Running in f76cf68c5c64
+        Removing intermediate container f76cf68c5c64
+        ---> d7cb10bf52e1
+        Successfully built d7cb10bf52e1
+        Successfully tagged ex1:latest
+
+#### 15 --compress		Compress the build context using gzip
+        $ docker build -t ex1 . --compress
+
+        Sending build context to Docker daemon  1.951kB
+        Step 1/8 : FROM node:10-alpine
+        ---> 01379e6790c7
+        Step 2/8 : RUN mkdir -p /src/app
+        ---> Using cache
+        ---> 898045d7075b
+        Step 3/8 : WORKDIR /src/app
+        ---> Using cache
+        ---> 28328904116b
+        Step 4/8 : COPY package.json /src/app/package.json
+        ---> Using cache
+        ---> 2ba7fb0abc3e
+        Step 5/8 : RUN npm install
+        ---> Using cache
+        ---> 813608aa11d8
+        Step 6/8 : COPY . /src/app
+        ---> Using cache
+        ---> 4a894c853748
+        Step 7/8 : EXPOSE 3000
+        ---> Using cache
+        ---> bd58ad036071
+        Step 8/8 : CMD [ "npm", "start" ]
+        ---> Using cache
+        ---> d7cb10bf52e1
+        Successfully built d7cb10bf52e1
+        Successfully tagged ex1:latest

@@ -179,7 +179,7 @@ Some of the commands with docker build and attributes are
         -w, --workdir string                 Working directory inside the container
 
 
-#### 8 -d	Run in detach mode in background and get the encrypted format of ID
+#### 11 -d	Run in detach mode in background and get the encrypted format of ID
         docker run -d --name sample -p 3000:3000 sample
         
         b1d419c977eecc8499bb2f67a6b0c166ab8ce5c60d1da1ea8dc3fbecd89e33ac

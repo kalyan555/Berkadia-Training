@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<div class="jumbotron text-center">
+<h1>Air Quality Index Of <u>{{locationAirData?.location}}</u></h1>      
+</div>
+<div class="container">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>PARAMETER</th>
+        <th>VALUE</th>
+        <th>LAST UPDATED</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of locationAirData?.measurements">
+        <td>{{i.parameter}}</td>
+        <td>{{i.value}}  {{i.unit}}</td>
+        <td>{{i.lastUpdated}}</td>
+      </tr>    
+    </tbody>
+  </table>
+  <a class="btn btn-primary btn-large btn-block mt-3" [routerLink]="['/Main']">Go to Home</a>
+</div>

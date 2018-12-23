@@ -1,0 +1,61 @@
+.jumbotron{
+    padding: 30px 20px;
+    background-color: rgba(0,123,255,0.5);
+    color: #FFF;    
+    box-shadow: 2px 2px 10px #26c6da;
+    border-radius: 0px;
+    transition: .3s linear all;
+    font-family: 'Righteous', cursive;
+    
+}
+
+.card-counter{
+    box-shadow: 2px 2px 10px #26c6da;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: 100px;
+    border-radius: 5px;
+    transition: .3s linear all;
+    font-family: 'Righteous', cursive;
+  }
+
+  .card-counter:hover{
+    box-shadow: 8px 8px 30px #26c6da;
+    background-color: rgb(0,123,255);
+    transition: .3s linear all;
+  }
+
+  .card-counter.primary{
+    background-color: rgba(0,123,255,0.8);
+    color: #FFF;
+    border:rgba(0,123,255,0.8) 1px;
+  }
+ 
+
+  .card-counter i{
+    font-size: 5em;
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    opacity: 0.3;
+  }
+
+  .card-counter .count-numbers{
+    position: absolute;
+    left: 50px;
+    top: 2.5em;
+    font-size: 22px;
+    display: block;
+  }
+
+  .card-counter .count-name{
+    position: absolute;
+    right: 35px;
+    top: 65px;
+    font-style: italic;
+    text-transform: capitalize;
+    display: block;
+    font-size: 18px;
+  }
+

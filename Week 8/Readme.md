@@ -1,5 +1,6 @@
 # Startup App
-A startup idea app built using 
+The app idea is to book the foodtruck available.
+A app is built using 
 * Angular
 * Node
 * MySQL

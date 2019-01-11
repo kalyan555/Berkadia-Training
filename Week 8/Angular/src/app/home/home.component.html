@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<div class="jumbotron text-center">
+<h1>Food Truck Booking</h1>      
+</div>
+
+  
+  <!-- Modal -->
+  
+<div class="container">
+    <div class="row">
+     <div class="col-sm-6 col-lg-4 col-md-6" *ngFor="let truck of foodtrucks">
+        <div class="card w3-center w3-animate-bottom">
+            <img class="card-img-top" [src]='truck.foodtruckImage' alt="Card image">
+            <div class="card-body text-center">
+            <h5 class="card-title">{{ truck.foodtruckName }}</h5>
+            <hr style="background-color:white"/>
+            <p class="card-text">
+              <span style="font-size:22px">Place</span><br />
+              {{ truck?.foodtruckarea }}
+            </p>
+            <hr width="50%" style="background-color:white;margin:auto;"/>
+            <p class="card-text">
+              <span style="font-size:22px">Serves</span><br />
+                {{ truck?.foodtruckType }}
+              </p>
+            <button type="button" class="btn btn-light btn-block text-danger" data-toggle="modal" data-target="#exampleModal" [routerLink]="['/Book',truck.foodtruckId]">
+                Book
+            </button>
+        </div>
+    </div>
+<!-- 
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content ">
+            <div class="modal-header modal-background">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true text-light">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                  <div class="form-group row">
+                      <label for="example-date-input" class="col-4 col-form-label">Select Date</label>
+                      <div class="col-8">
+                        <input class="form-control" type="date" value="2011-08-19" name="bookingDate" [(ngModel)]="bookingdate">
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" (click)="save( truck?.foodtruckName )" [routerLink]="['/Book',foodtruckId?.id]">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+  </div>
+  </div>

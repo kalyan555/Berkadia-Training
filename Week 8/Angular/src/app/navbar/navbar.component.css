@@ -1,0 +1,9 @@
+.navbar{
+    background-color: rgba(255,26,26,0.6);
+    color:white;
+    font-family: 'Righteous', cursive;
+}
+
+.nav-item:hover{
+   color:white;
+}

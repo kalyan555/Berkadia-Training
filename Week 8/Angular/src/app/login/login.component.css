@@ -1,0 +1,30 @@
+.jumbotron{
+    padding: 40px 30px; 
+}
+h1{
+    font-size: 3.5em;
+    font-family: 'Righteous', cursive;
+    padding: 15px;
+}
+h3{
+    font-family: 'Righteous', cursive;
+    padding: 20px;
+}
+.results{
+    margin:auto;
+    width:50%;
+   }
+input[type=text],
+input[type=password]
+{
+    font-size: 20px;
+    padding:25px;
+    color:rgb(255,26,26);
+    font-family: 'Righteous', cursive;
+}
+button{
+    font-size: 20px;
+    border:solid rgb(255,26,26) 5px;
+    background: rgba(255,26,26,0.6);
+    font-family: 'Righteous', cursive;
+}

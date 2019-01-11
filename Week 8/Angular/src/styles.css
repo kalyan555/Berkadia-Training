@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.bg-img
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('./assets/foodtruck.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white
+    
+}
+
+.jumbotron{
+    padding: 20px 15px;
+    background-color: rgba(255,26,26,0.6);
+    color: #FFF;    
+    box-shadow: 2px 2px 10px #ff1a1a;
+    border-radius: 0px;
+    transition: .3s linear all;
+    font-family: 'Righteous', cursive;   
+}
+
+a{
+  font-size:20px;
+}

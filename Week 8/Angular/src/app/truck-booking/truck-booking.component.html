@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="jumbotron text-center">
+<h1>Food Truck Booking</h1>      
+</div>
+<div class="container">
+    <div class="row w3-center w3-animate-bottom">
+        <div class="col-sm-12 col-lg-6 col-md-6">
+            <div >
+                <img class="card-img-top" [src]="foodtruck?.foodtruckImage" alt="Card image" style="width:400px;margin:auto">
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-md-12">
+             <div class="card ">
+                <div class="card-body text-center">
+                <h2 class="card-title">{{foodtruck?.foodtruckName}}</h2>
+                <hr width="60%"/>
+                <p class="card-text"><span style="font-size:22px">Place</span><br />{{foodtruck?.foodtruckarea}}</p>
+                <hr width="30%"/>
+                <p class="card-text"><span style="font-size:22px">Serves</span><br />{{foodtruck?.foodtruckType}}</p>
+                <hr width="30%"/>                
+                <form style="width:60%;margin:auto;">
+                    <div class="form-group">
+                        <span style="font-size:22px">Select Date</span>
+                          <input class="form-control" type="date" value="2011-08-19" name="bookingDate" [(ngModel)]="bookingdate">
+                      </div>
+                </form>
+                <button (click)="save(foodtruck.foodtruckName)" class="btn btn-light btn-block">Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <h1 style="color:white;font-family: 'Righteous', cursive;">{{status}}</h1>      
+    </div>
+</div>

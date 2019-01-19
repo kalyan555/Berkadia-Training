@@ -1,0 +1,34 @@
+
+<app-navbar></app-navbar>
+
+<div class="container">
+    <form >
+    <div class="form-group">
+    <label class="text-center" style="font-size:25px" for="email">{{question.question}}</label>
+  </div>
+  <div class="form-check" *ngFor="let i of options">
+    <label class="form-check-label" style="font-size:20px">
+      <input type="radio"  class="form-check-input" [(ngModel)]="check" name="optradio" [value]="i">{{i}}
+    </label>
+  </div>
+
+  <button style="margin:10px;font-size:20px" (click)="next()" class="btn btn-primary ml-2 ">Next Question</button>  
+  <button  style="margin:10px;font-size:20px" (click)="previous()" class="btn btn-primary ml-2  ">Previous Question</button>  
+  <button  style="margin:10px;font-size:20px" (click)="submit(optradio)" class="btn btn-primary ml-2 ">Submit Question</button>  
+  </form>
+ <br />
+  <button *ngIf="showsubmit" (click)="submitTestComplete()" class="btn btn-primary btn-block ">{{submitTest}}</button>  
+</div>
+<h3 *ngIf="submitted" class="text-center">{{TestScore}}<h3>
+
+<div class="container">
+<div *ngFor="let i of attemptedQuestions">
+    <div class="card bg-primary" [ngStyle]="{'background-color':i.correct === true ? 'green' : 'red' }">
+            <div class="card-body">
+                <p class="card-text">{{i.question}}</p>
+                <p class="card-text">Correct Answer: {{i.correct_answer}}</p>
+                <p class="card-text">Your Answer: {{i.selectedOption}}</p>
+            </div>
+    </div>
+</div>
+</div>
